@@ -170,6 +170,7 @@ const txtBuscarProducto = document.querySelector(".main-busqueda-texto"),
   botonBorrarInfoJson = document.querySelector(".borrarJSON"),
   cantidadProductosMainX = document.querySelector(".main-cantidad-productos");
 // Tienda
+
 function crearCuadradoProducto(arr) {
   contenedorProductosVenta.innerHTML = "";
   let html;
@@ -204,7 +205,6 @@ function crearCuadradoProducto(arr) {
       productos.forEach((e) => {
         e.id == idEncontrado && carritoProductos.push(e);
       });
-      console.log(carritoProductos);
       const ArrayJSON = JSON.stringify(carritoProductos);
       localStorage.setItem("carrito", ArrayJSON);
       cantidadProductosMain(carritoProductos);
@@ -214,7 +214,6 @@ function crearCuadradoProducto(arr) {
 crearCuadradoProducto(productos);
 
 let productosBuscados = [];
-
 function buscarProducto(arr, filtro) {
   let encontrado = arr.filter((el) => {
     return el.modelo.toLowerCase().includes(filtro.toLowerCase());
@@ -232,28 +231,22 @@ function filtros(arr, tipoProducto, marca) {
   return encontrado;
 }
 
-btnBuscarProducto.addEventListener("click", () => {
-  if (productosBuscados.length > 0) {
-    productosBuscados = buscarProducto(
-      productosBuscados,
-      txtBuscarProducto.value
-    );
-    crearCuadradoProducto(productosBuscados);
-  } else {
-    productosBuscados = buscarProducto(productos, txtBuscarProducto.value);
-    crearCuadradoProducto(productosBuscados);
-  }
-});
 txtBuscarProducto.addEventListener("keyup", () => {
-  if (productosBuscados.length > 0) {
+  checkboxIntelProducto.checked = false;
+  checkboxAmdProducto.checked = false;
+  checkboxNvidiaProducto.checked = false;
+  checkboxAmdTarjProducto.checked = false;
+  if ((productosBuscados.length = 0)) {
     productosBuscados = buscarProducto(
       productosBuscados,
       txtBuscarProducto.value
     );
+    console.log(productosBuscados);
     crearCuadradoProducto(productosBuscados);
   } else {
     productosBuscados = buscarProducto(productos, txtBuscarProducto.value);
     crearCuadradoProducto(productosBuscados);
+    console.log(productosBuscados);
   }
 });
 
