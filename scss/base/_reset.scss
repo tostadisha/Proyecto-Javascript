@@ -1,0 +1,19 @@
+a {
+  text-decoration: none;
+  color: black;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+li {
+  list-style: none;
+}
+body {
+  margin: 0;
+  background-color: whitesmoke;
+}
+.color-primario {
+  img {
+    fill: $colorPrimario;
+  }
+}

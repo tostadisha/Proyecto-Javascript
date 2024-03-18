@@ -1,0 +1,39 @@
+header {
+  nav {
+    display: flex;
+    .nav-logo {
+      width: 45%;
+    }
+    .nav-derecha {
+      display: flex;
+      box-sizing: border-box;
+      height: max-content;
+      justify-content: space-between;
+      width: 53%;
+      .nav-centroNavegacion {
+        width: auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background-color: whitesmoke;
+        ul {
+          display: flex;
+          padding: 0;
+          justify-content: space-around;
+          img {
+            height: 5vh;
+            padding: 0px 2px;
+          }
+        }
+      }
+      .nav-registro {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        img {
+          height: 4vh;
+        }
+      }
+    }
+  }
+}

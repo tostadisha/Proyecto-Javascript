@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-logo"></div>
+        <div class="nav-derecha">
+          <div class="nav-centroNavegacion">
+            <ul>
+              <li>
+                <a href="#" class="color-primario"
+                  ><img src="img/casita.svg" alt=""
+                /></a>
+              </li>
+              <li>
+                <a href="pages/carrito.html" class="color-primario"
+                  ><img src="img/carrito.svg" alt=""
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="main-caja-busqueda">
+        <p>Estás ahora en la tienda, puedes comprar.</p>
+        <div class="busqueda-especifica">
+          <p>Busqueda:</p>
+          <input type="text" class="main-busqueda-texto" />
+          <button class="boton-busqueda-productos">Buscar</button>
+        </div>
+      </div>
+      <div class="main-inferior">
+        <div class="main-caja-filtros">
+          <div>
+            <div class="procesadores-filtro">
+              <h2>Procesadores</h2>
+              <input type="checkbox" id="cbox-proce-intel" />
+              <label for="cbox-proce-intel">INTEL</label>
+              <input type="checkbox" id="cbox-proce-amd" />
+              <label for="cbox-proce-amd">AMD</label>
+            </div>
+          </div>
+          <div>
+            <div class="tarjetas-filtro">
+              <h2>Tarjetas gráficas</h2>
+              <input type="checkbox" id="cbox-tarjeta-nvidia" />
+              <label for="cbox-tarjeta-nvidia">NVIDIA</label>
+              <input type="checkbox" id="cbox-tarjeta-amd" />
+              <label for="cbox-tarjeta-amd">AMD</label>
+            </div>
+          </div>
+          <div>
+            <div class="main-cantidad-productos">
+              <h2>Tienes en el carrito:</h2>
+            </div>
+          </div>
+        </div>
+        <div class="main-caja-productos"></div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-derechos">
+        <p>Todos los derechos reservado a nuestra compañía</p>
+      </div>
+      <div class="footer-redes">
+        <a href="https://www.facebook.com"
+          ><img src="img/facebook-logo.svg" alt="Facebook"
+        /></a>
+        <a href="https://www.twitter.com/home"
+          ><img src="img/twitter-logo.svg" alt="Twitter"
+        /></a>
+        <a href="https://www.youtube.com/"
+          ><img src="img/youtube-logo.svg" alt="Youtube"
+        /></a>
+        <a href="https://www.instagram.com/"
+          ><img src="img/instagram-logo.svg" alt="Instagram"
+        /></a>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,140 @@
+main .main-inferior {
+  display: flex;
+  margin: 5px 3%;
+  height: auto;
+  .main-caja-filtros {
+    border-color: $colorTerciario;
+    border-style: dashed;
+    width: 20%;
+    border-radius: 20px;
+  }
+  .main-caja-productos {
+    border-color: $colorTerciario;
+    border-style: dashed;
+    width: 75%;
+    border-radius: 20px;
+    margin-left: 5%;
+  }
+  .main-cantidad-productos {
+    display: flex;
+    flex-direction: column;
+  }
+  .carrito-simple-main {
+    img {
+      height: 20px;
+    }
+  }
+}
+
+main .main-caja-busqueda {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5px 3%;
+  border-color: $colorTerciario;
+  border-style: dashed;
+  border-radius: 20px;
+  height: 10vh;
+  p {
+    font-size: 30px;
+    font-weight: 700;
+    color: $colorTerciario;
+  }
+  .busqueda-especifica {
+    display: flex;
+    align-items: center;
+    .boton-busqueda-productos {
+      height: 30px;
+      margin-left: 20px;
+    }
+    p {
+      font-size: 30px;
+    }
+    .main-busqueda-texto {
+      height: 2vh;
+      margin-left: 20px;
+    }
+  }
+}
+main .main-caja-filtros {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+
+main .main-caja-productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  .main-producto-compra {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 250px;
+    border-radius: 30px;
+    margin: 5px;
+    border-color: $colorTerciario;
+    border-style: dashed;
+    .producto-datos-top {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      img {
+        height: 3vh;
+      }
+    }
+    .producto-imagen-principal {
+      display: flex;
+      justify-content: center;
+      margin: 0 5px;
+      img {
+        height: 200px;
+        width: auto;
+      }
+    }
+    .producto-nombre {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .producto-precio {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      p {
+        font-size: 20px;
+      }
+    }
+    .producto-div-boton-agregar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .boton-agregar {
+        margin: 10px;
+        appearance: none;
+        background-color: $colorSecundario;
+        border: 1px solid rgba(27, 31, 35, 0.15);
+        border-radius: 6px;
+        box-shadow: rgba(27, 31, 35, 0.1) 0 1px 0;
+        box-sizing: border-box;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial,
+          sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 20px;
+        padding: 6px 16px;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: middle;
+        white-space: nowrap;
+      }
+    }
+  }
+}
