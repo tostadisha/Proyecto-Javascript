@@ -1,165 +1,10 @@
-const productos = [
-  {
-    id: 1,
-    marca: "NVIDIA",
-    modelo: "GeForce GTX 1650 4GB",
-    precio: 190000,
-    añoLanzamiento: 2019,
-    tipoProducto: "Tarjeta",
-    ubicacion: "img/GeForce-GTX-1650-4GB.webp",
-    imagenLogo: "img/nvidia-logo.webp",
-  },
-  {
-    id: 2,
-    marca: "NVIDIA",
-    modelo: "GeForce RTX 3050 8GB",
-    precio: 250000,
-    añoLanzamiento: 2020,
-    tipoProducto: "Tarjeta",
-    ubicacion: "img/GeForce-RTX-3050-8GB.webp",
-    imagenLogo: "img/nvidia-logo.webp",
-  },
-  {
-    id: 3,
-    marca: "NVIDIA",
-    modelo: "GeForce RTX 4060 Ti 8GB",
-    precio: 300000,
-    añoLanzamiento: 2023,
-    tipoProducto: "Tarjeta",
-    ubicacion: "img/GeForce-RTX-4060-Ti-8GB.webp",
-    imagenLogo: "img/nvidia-logo.webp",
-  },
-  {
-    id: 4,
-    marca: "AMD",
-    modelo: "RX 570 8GB",
-    precio: 200000,
-    añoLanzamiento: 2018,
-    tipoProducto: "Tarjeta",
-    ubicacion: "img/RX-570-8GB.webp",
-    imagenLogo: "img/amd-logo.webp",
-  },
-  {
-    id: 5,
-    marca: "AMD",
-    modelo: "RX 7600 8GB",
-    precio: 250000,
-    añoLanzamiento: 2020,
-    tipoProducto: "Tarjeta",
-    ubicacion: "img/RX-7600-8GB.webp",
-    imagenLogo: "img/amd-logo.webp",
-  },
-  {
-    id: 6,
-    marca: "AMD",
-    modelo: "RX 7800 XT 16GB",
-    precio: 250000,
-    añoLanzamiento: 2022,
-    tipoProducto: "Tarjeta",
-    ubicacion: "img/RX-7800-XT-16GB.webp",
-    imagenLogo: "img/amd-logo.webp",
-  },
-  {
-    id: 7,
-    marca: "INTEL",
-    modelo: "Intel Core i5 10400F",
-    precio: 250000,
-    añoLanzamiento: 2020,
-    tipoProducto: "Procesador",
-    ubicacion: "img/Intel-Core-i5-10400F.webp",
-    imagenLogo: "img/intel-logo.webp",
-  },
-  {
-    id: 8,
-    marca: "INTEL",
-    modelo: "Intel Core i5 12400",
-    precio: 275000,
-    añoLanzamiento: 2022,
-    tipoProducto: "Procesador",
-    ubicacion: "img/Intel-Core-i5-12400.webp",
-    imagenLogo: "img/intel-logo.webp",
-  },
-  {
-    id: 9,
-    marca: "INTEL",
-    modelo: "Intel Core i7 12700F",
-    precio: 300000,
-    añoLanzamiento: 2021,
-    tipoProducto: "Procesador",
-    ubicacion: "img/Intel-Core-i7-12700F.webp",
-    imagenLogo: "img/intel-logo.webp",
-  },
-  {
-    id: 10,
-    marca: "AMD",
-    modelo: "Ryzen 3 3200G",
-    precio: 320000,
-    añoLanzamiento: 2019,
-    tipoProducto: "Procesador",
-    ubicacion: "img/Ryzen-3-3200G.webp",
-    imagenLogo: "img/amd-logo.webp",
-  },
-  {
-    id: 11,
-    marca: "AMD",
-    modelo: "Ryzen 5 3600",
-    precio: 300000,
-    añoLanzamiento: 2020,
-    tipoProducto: "Procesador",
-    ubicacion: "img/Ryzen-5-3600.webp",
-    imagenLogo: "img/amd-logo.webp",
-  },
-  {
-    id: 12,
-    marca: "AMD",
-    modelo: "Ryzen 5 5900X",
-    precio: 370000,
-    añoLanzamiento: 2023,
-    tipoProducto: "Procesador",
-    ubicacion: "img/Ryzen-5-5900X.webp",
-    imagenLogo: "img/amd-logo.webp",
-  },
-];
-const usuariosSistema = [
-  {
-    usuario: "xd",
-    contrasena: "xd",
-    nombre: "prueba",
-    saldo: 10000000000,
-  },
-  {
-    usuario: "pepito123",
-    contrasena: "95123",
-    nombre: "Tutor/a",
-    saldo: 500000,
-  },
-  {
-    usuario: "canela23",
-    contrasena: "amor5",
-    nombre: "Zoe",
-    saldo: 50,
-  },
-  {
-    usuario: "elmascapo456",
-    contrasena: "7895123",
-    nombre: "Jesús de Nazaret",
-    saldo: 1000000,
-  },
-  {
-    usuario: "cabraroja",
-    contrasena: "holamama123",
-    nombre: "Leo Messi",
-    saldo: 20000000,
-  },
-];
-class UsuarioNuevo {
-  constructor(usuarioR, contrasenaR, nombreR) {
-    this.usuario = usuarioR;
-    this.contrasena = contrasenaR;
-    this.nombre = nombreR;
-    this.saldo = 3500000;
-  }
-}
+let productos = [];
+fetch("../json/productos.json")
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data);
+    productos = data;
+  });
 const txtBuscarProducto = document.querySelector(".main-busqueda-texto"),
   contenedorProductosVenta = document.querySelector(".main-caja-productos"),
   btnBuscarProducto = document.querySelector(".boton-busqueda-productos"),
@@ -198,6 +43,7 @@ function crearCuadradoProducto(arr) {
     contenedorProductosVenta.innerHTML =
       contenedorProductosVenta.innerHTML + html;
   }
+
   const botones = document.querySelectorAll(".boton-agregar");
   botones.forEach((b) => {
     b.addEventListener("click", (e) => {
@@ -211,7 +57,9 @@ function crearCuadradoProducto(arr) {
     });
   });
 }
-crearCuadradoProducto(productos);
+setTimeout(() => {
+  crearCuadradoProducto(productos);
+}, 1500);
 
 let productosBuscados = [];
 function buscarProducto(arr, filtro) {
