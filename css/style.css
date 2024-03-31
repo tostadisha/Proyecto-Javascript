@@ -50,6 +50,10 @@ header nav {
 header nav .nav-logo {
   width: 45%;
 }
+header nav .nav-logo img {
+  height: 7vh;
+  margin-left: 20px;
+}
 header nav .nav-derecha {
   display: flex;
   box-sizing: border-box;

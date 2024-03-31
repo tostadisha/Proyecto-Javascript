@@ -4,10 +4,6 @@ const contenedorProductosCarrito = document.querySelector(
 let botonQuitarCarrito = document.querySelectorAll(".producto-boton-quitar");
 let cantidadDeProductos = document.querySelector(".cantidad-productos-final");
 let precioTotalProductos = document.querySelector(".precio-productos-final");
-let botonComprar = document.querySelector(".producto-boton-comprar");
-let listaProductosCarritoFinal = document.querySelector(
-  ".carrito-productos-lista"
-);
 function crearCuadradoProducto(arr) {
   contenedorProductosCarrito.innerHTML = "";
   arr.forEach((el, i) => {
@@ -62,6 +58,7 @@ document.addEventListener("click", function (e) {
     localStorage.setItem("carrito", ArrayJSON);
     cantidadDeProductosLength = carritoProductos.length;
     precioTotalProductosX(carritoProductos);
+    carritoVacio();
   }
 });
 document.addEventListener("click", function (e) {

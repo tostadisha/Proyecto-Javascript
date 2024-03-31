@@ -3,6 +3,10 @@ header {
     display: flex;
     .nav-logo {
       width: 45%;
+      img {
+        height: 7vh;
+        margin-left: 20px;
+      }
     }
     .nav-derecha {
       display: flex;

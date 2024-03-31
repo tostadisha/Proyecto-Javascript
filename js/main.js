@@ -2,17 +2,14 @@ let productos = [];
 fetch("../json/productos.json")
   .then((response) => response.json())
   .then((data) => {
-    console.log(data);
     productos = data;
   });
 const txtBuscarProducto = document.querySelector(".main-busqueda-texto"),
   contenedorProductosVenta = document.querySelector(".main-caja-productos"),
-  btnBuscarProducto = document.querySelector(".boton-busqueda-productos"),
   checkboxIntelProducto = document.querySelector("#cbox-proce-intel"),
   checkboxAmdProducto = document.querySelector("#cbox-proce-amd"),
   checkboxNvidiaProducto = document.querySelector("#cbox-tarjeta-nvidia"),
   checkboxAmdTarjProducto = document.querySelector("#cbox-tarjeta-amd"),
-  botonBorrarInfoJson = document.querySelector(".borrarJSON"),
   cantidadProductosMainX = document.querySelector(".main-cantidad-productos");
 function crearCuadradoProducto(arr) {
   contenedorProductosVenta.innerHTML = "";
@@ -44,7 +41,7 @@ function crearCuadradoProducto(arr) {
 
   const botones = document.querySelectorAll(".boton-agregar");
   botones.forEach((b) => {
-    b.addEventListener("click", (e) => {
+    b.addEventListener("click", () => {
       let idEncontrado = b.id;
       productos.forEach((e) => {
         e.id == idEncontrado && carritoProductos.push(e);
@@ -99,12 +96,10 @@ txtBuscarProducto.addEventListener("keyup", () => {
       productosBuscados,
       txtBuscarProducto.value
     );
-    console.log(productosBuscados);
     crearCuadradoProducto(productosBuscados);
   } else {
     productosBuscados = buscarProducto(productos, txtBuscarProducto.value);
     crearCuadradoProducto(productosBuscados);
-    console.log(productosBuscados);
   }
 });
 
@@ -150,7 +145,7 @@ if (ArrayCarritoRecuperado == null) {
 } else {
   carritoProductos = ArrayCarritoRecuperado;
 }
-function cantidadProductosMain(arr) {
+function cantidadProductosMain() {
   let cantidadProductos = 0;
   cantidadProductos = carritoProductos.length;
   cantidadProductosMainX.innerHTML = `<h2>Tienes en el carrito</h2>
