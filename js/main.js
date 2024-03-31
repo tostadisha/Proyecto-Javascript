@@ -14,8 +14,6 @@ const txtBuscarProducto = document.querySelector(".main-busqueda-texto"),
   checkboxAmdTarjProducto = document.querySelector("#cbox-tarjeta-amd"),
   botonBorrarInfoJson = document.querySelector(".borrarJSON"),
   cantidadProductosMainX = document.querySelector(".main-cantidad-productos");
-// Tienda
-
 function crearCuadradoProducto(arr) {
   contenedorProductosVenta.innerHTML = "";
   let html;
@@ -54,6 +52,18 @@ function crearCuadradoProducto(arr) {
       const ArrayJSON = JSON.stringify(carritoProductos);
       localStorage.setItem("carrito", ArrayJSON);
       cantidadProductosMain(carritoProductos);
+      Toastify({
+        text: "Usted ha añadido un producto a su carrito",
+        duration: 3000,
+        destination: "pages/carrito.html",
+        newWindow: true,
+        gravity: "top",
+        position: "right",
+        stopOnFocus: true,
+        style: {
+          background: "linear-gradient(to right, #c63d2f, #e25e3e)",
+        },
+      }).showToast();
     });
   });
 }
@@ -133,7 +143,6 @@ checkboxNvidiaProducto.onchange = () =>
 checkboxAmdTarjProducto.onchange = () =>
   valoresCheck(checkboxAmdTarjProducto, "Tarjeta", "AMD");
 
-// const botones = document.querySelectorAll(".boton-agregar");
 let carritoProductos = [];
 let ArrayCarritoJSON = localStorage.getItem("carrito");
 let ArrayCarritoRecuperado = JSON.parse(ArrayCarritoJSON);

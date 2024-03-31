@@ -14,6 +14,11 @@ main .main-inferior {
     width: 75%;
     border-radius: 20px;
     margin-left: 5%;
+    .productos-cargando {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
   .main-cantidad-productos {
     display: flex;

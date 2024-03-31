@@ -4,6 +4,7 @@ const contenedorProductosCarrito = document.querySelector(
 let botonQuitarCarrito = document.querySelectorAll(".producto-boton-quitar");
 let cantidadDeProductos = document.querySelector(".cantidad-productos-final");
 let precioTotalProductos = document.querySelector(".precio-productos-final");
+let botonComprar = document.querySelector(".producto-boton-comprar");
 function crearCuadradoProducto(arr) {
   contenedorProductosCarrito.innerHTML = "";
   arr.forEach((el, i) => {
@@ -58,7 +59,20 @@ document.addEventListener("click", function (e) {
     localStorage.setItem("carrito", ArrayJSON);
     cantidadDeProductosLength = carritoProductos.length;
     precioTotalProductosX(carritoProductos);
-    console.log("El nuevo valor de lenght es :" + cantidadDeProductosLength);
+  }
+});
+document.addEventListener("click", function (e) {
+  if (e.target && e.target.classList.contains("producto-boton-comprar")) {
+    localStorage.clear();
+    carritoProductos = [];
+    crearCuadradoProducto(carritoProductos);
+    cantidadDeProductosLength = carritoProductos.length;
+    precioTotalProductosX(carritoProductos);
+    Swal.fire({
+      title: "Compra realizada",
+      text: "Su producto le llegará en unos días.",
+      icon: "success",
+    });
   }
 });
 console.log(cantidadDeProductosLength);

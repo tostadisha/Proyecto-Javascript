@@ -9,6 +9,11 @@
       href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <title>Document</title>
   </head>
@@ -40,7 +45,6 @@
         <div class="busqueda-especifica">
           <p>Busqueda:</p>
           <input type="text" class="main-busqueda-texto" />
-          <!-- <button class="boton-busqueda-productos">Buscar</button> -->
         </div>
       </div>
       <div class="main-inferior">
@@ -69,7 +73,11 @@
             </div>
           </div>
         </div>
-        <div class="main-caja-productos"></div>
+        <div class="main-caja-productos">
+          <div class="productos-cargando">
+            <img src="../img/carga.gif" alt="" />
+          </div>
+        </div>
       </div>
     </main>
     <footer>
@@ -92,5 +100,9 @@
       </div>
     </footer>
     <script src="js/main.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
   </body>
 </html>
