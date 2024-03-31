@@ -23,11 +23,14 @@ main .main-inferior {
   .main-cantidad-productos {
     display: flex;
     flex-direction: column;
-  }
-  .carrito-simple-main {
-    img {
-      height: 20px;
+    h2 {
+      margin-bottom: 0;
     }
+  }
+}
+.carrito-simple-main {
+  img {
+    height: 20px;
   }
 }
 

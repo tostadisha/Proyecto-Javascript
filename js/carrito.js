@@ -5,6 +5,9 @@ let botonQuitarCarrito = document.querySelectorAll(".producto-boton-quitar");
 let cantidadDeProductos = document.querySelector(".cantidad-productos-final");
 let precioTotalProductos = document.querySelector(".precio-productos-final");
 let botonComprar = document.querySelector(".producto-boton-comprar");
+let listaProductosCarritoFinal = document.querySelector(
+  ".carrito-productos-lista"
+);
 function crearCuadradoProducto(arr) {
   contenedorProductosCarrito.innerHTML = "";
   arr.forEach((el, i) => {
@@ -73,6 +76,16 @@ document.addEventListener("click", function (e) {
       text: "Su producto le llegará en unos días.",
       icon: "success",
     });
+    carritoVacio();
   }
 });
-console.log(cantidadDeProductosLength);
+function carritoVacio() {
+  if (carritoProductos.length == 0) {
+    let html = `<div class="carrito-vacio">
+            <p> ¡No tienes productos en tu carrito! </p>
+            <button class="boton-carrito-vacio" > <a href="../index.html"> Prueba comprar algo en la tienda </a></button>
+          </div>`;
+    contenedorProductosCarrito.innerHTML += html;
+  }
+}
+carritoVacio();

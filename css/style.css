@@ -16,7 +16,7 @@ body {
 }
 
 .color-primario img {
-  fill: #FFBB5C;
+  fill: #ffbb5c;
 }
 
 footer {
@@ -28,7 +28,7 @@ footer .footer-derechos {
 }
 footer .footer-derechos p {
   text-align: center;
-  color: #C63D2F;
+  color: #c63d2f;
   font-size: 25px;
 }
 footer .footer-redes {
@@ -86,7 +86,7 @@ main .carrito-main-caja {
   display: flex;
   justify-content: space-around;
   align-items: top;
-  border-color: #E25E3E;
+  border-color: #e25e3e;
   border-style: dashed;
   height: auto;
   width: 90%;
@@ -95,15 +95,59 @@ main .carrito-main-caja {
   border-radius: 30px;
 }
 main .carrito-main-caja .carrito-productos-lista {
-  border-color: #E25E3E;
+  border-color: #e25e3e;
   border-style: dashed;
   border-radius: 30px;
   width: 60%;
   height: 90%;
 }
+main .carrito-main-caja .carrito-productos-lista .carrito-vacio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .carrito-main-caja .carrito-productos-lista .carrito-vacio p {
+  font-size: 30px;
+  font-weight: 700;
+}
+main .carrito-main-caja .carrito-productos-lista .carrito-vacio button {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #fa6400;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+  margin: 30px;
+}
+main .carrito-main-caja .carrito-productos-lista .carrito-vacio button a {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+}
 main .carrito-main-caja .carrito-productos-lista .muestra-producto-carrito {
   background-color: white;
-  border-color: #E25E3E;
+  border-color: #e25e3e;
   border-style: solid;
   margin: 2%;
   padding: 10px;
@@ -127,7 +171,7 @@ main .carrito-main-caja .carrito-productos-lista .muestra-producto-carrito .prod
 main .carrito-main-caja .carrito-productos-lista .muestra-producto-carrito .producto-carrito-nombre #producto-nombre-carrito {
   border-style: dashed;
   border-radius: 30px;
-  border-color: #E25E3E;
+  border-color: #e25e3e;
   padding: 10px;
 }
 main .carrito-main-caja .carrito-productos-lista .muestra-producto-carrito .producto-carrito-nombre #producto-marca-carrito {
@@ -136,14 +180,14 @@ main .carrito-main-caja .carrito-productos-lista .muestra-producto-carrito .prod
   justify-content: center;
   border-style: dashed;
   border-radius: 30px;
-  border-color: #E25E3E;
+  border-color: #e25e3e;
   padding: 8px;
   margin-top: 5px;
 }
 main .carrito-main-caja .carrito-productos-lista .muestra-producto-carrito .producto-carrito-precio {
   border-style: dashed;
   border-radius: 30px;
-  border-color: #E25E3E;
+  border-color: #e25e3e;
   padding: 10px;
 }
 main .carrito-main-caja .carrito-productos-lista .muestra-producto-carrito .producto-boton-quitar {
@@ -179,7 +223,7 @@ main .carrito-resumen-plata-compra {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-color: #E25E3E;
+  border-color: #e25e3e;
   border-style: dashed;
   border-radius: 30px;
   width: 30%;
@@ -189,7 +233,7 @@ main .carrito-resumen-plata-compra .carrito-resumen-padre {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-color: #E25E3E;
+  border-color: #e25e3e;
   border-style: dashed;
   border-radius: 30px;
   height: 80%;
@@ -217,7 +261,13 @@ main .carrito-resumen-plata-compra .carrito-resumen-padre .precio-productos-fina
 main .carrito-resumen-plata-compra .carrito-resumen-padre .precio-productos-final h1 {
   margin: 0;
 }
-main .carrito-resumen-plata-compra .carrito-resumen-padre .producto-boton-comprar {
+main .carrito-resumen-plata-compra div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+}
+main .carrito-resumen-plata-compra div .producto-boton-comprar {
   align-items: center;
   background-clip: padding-box;
   background-color: #fa6400;
@@ -243,9 +293,8 @@ main .carrito-resumen-plata-compra .carrito-resumen-padre .producto-boton-compra
   -webkit-user-select: none;
   touch-action: manipulation;
   vertical-align: baseline;
-  width: auto;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  width: 70%;
+  margin: 30px 0px;
 }
 
 main .main-inferior {
@@ -254,13 +303,13 @@ main .main-inferior {
   height: auto;
 }
 main .main-inferior .main-caja-filtros {
-  border-color: #E25E3E;
+  border-color: #e25e3e;
   border-style: dashed;
   width: 20%;
   border-radius: 20px;
 }
 main .main-inferior .main-caja-productos {
-  border-color: #E25E3E;
+  border-color: #e25e3e;
   border-style: dashed;
   width: 75%;
   border-radius: 20px;
@@ -275,7 +324,11 @@ main .main-inferior .main-cantidad-productos {
   display: flex;
   flex-direction: column;
 }
-main .main-inferior .carrito-simple-main img {
+main .main-inferior .main-cantidad-productos h2 {
+  margin-bottom: 0;
+}
+
+.carrito-simple-main img {
   height: 20px;
 }
 
@@ -284,7 +337,7 @@ main .main-caja-busqueda {
   justify-content: space-around;
   align-items: center;
   margin: 5px 3%;
-  border-color: #E25E3E;
+  border-color: #e25e3e;
   border-style: dashed;
   border-radius: 20px;
   height: 10vh;
@@ -292,7 +345,7 @@ main .main-caja-busqueda {
 main .main-caja-busqueda p {
   font-size: 30px;
   font-weight: 700;
-  color: #E25E3E;
+  color: #e25e3e;
 }
 main .main-caja-busqueda .busqueda-especifica {
   display: flex;
@@ -328,7 +381,7 @@ main .main-caja-productos .main-producto-compra {
   width: 250px;
   border-radius: 30px;
   margin: 5px;
-  border-color: #E25E3E;
+  border-color: #e25e3e;
   border-style: dashed;
 }
 main .main-caja-productos .main-producto-compra .producto-datos-top {
@@ -369,7 +422,7 @@ main .main-caja-productos .main-producto-compra .producto-div-boton-agregar {
 main .main-caja-productos .main-producto-compra .producto-div-boton-agregar .boton-agregar {
   margin: 10px;
   appearance: none;
-  background-color: #FFBB5C;
+  background-color: #ffbb5c;
   border: 1px solid rgba(27, 31, 35, 0.15);
   border-radius: 6px;
   box-shadow: rgba(27, 31, 35, 0.1) 0 1px 0;
