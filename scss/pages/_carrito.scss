@@ -4,18 +4,22 @@ main {
     justify-content: space-around;
     align-items: top;
     border-color: $colorTerciario;
-    border-style: dashed;
+    border-style: solid;
     height: auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     width: 90%;
     margin: 0% 5%;
     padding: 50px 0px;
     border-radius: 30px;
     .carrito-productos-lista {
       border-color: $colorTerciario;
-      border-style: dashed;
+      border-style: solid;
+      background-color: #fa6400;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
       border-radius: 30px;
       width: 60%;
       height: 90%;
+      padding: 20px;
       .carrito-vacio {
         display: flex;
         flex-direction: column;
@@ -24,39 +28,47 @@ main {
         p {
           font-size: 30px;
           font-weight: 700;
+          color: white;
         }
         button {
           align-items: center;
-          background-clip: padding-box;
-          background-color: #fa6400;
-          border: 1px solid transparent;
-          border-radius: 0.25rem;
-          box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+          appearance: none;
+          background-color: #fff;
+          border-radius: 24px;
+          border-style: none;
+          box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
+            rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
           box-sizing: border-box;
-          color: #fff;
+          color: #3c4043;
           cursor: pointer;
           display: inline-flex;
-          font-family: system-ui, -apple-system, system-ui, "Helvetica Neue",
-            Helvetica, Arial, sans-serif;
-          font-size: 16px;
-          font-weight: 600;
+          fill: currentcolor;
+          font-family: "Google Sans", Roboto, Arial, sans-serif;
+          font-size: 14px;
+          font-weight: 500;
+          height: 48px;
           justify-content: center;
-          line-height: 1.25;
-          margin: 0;
-          min-height: 3rem;
-          padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+          letter-spacing: 0.25px;
+          line-height: normal;
+          max-width: 100%;
+          overflow: visible;
+          padding: 2px 24px;
           position: relative;
-          text-decoration: none;
-          transition: all 250ms;
+          text-align: center;
+          text-transform: none;
+          transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1),
+            opacity 15ms linear 30ms,
+            transform 270ms cubic-bezier(0, 0, 0.2, 1) 0ms;
           user-select: none;
           -webkit-user-select: none;
           touch-action: manipulation;
-          vertical-align: baseline;
           width: auto;
-          margin: 30px;
+          will-change: transform, opacity;
+          z-index: 0;
+          margin-bottom: 20px;
           a {
-            color: white;
-            font-size: 16px;
+            color: black;
+            font-size: 20px;
             font-weight: 500;
           }
         }
@@ -65,7 +77,10 @@ main {
         background-color: white;
         border-color: $colorTerciario;
         border-style: solid;
-        margin: 2%;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+          rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+          rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        margin: 4%;
         padding: 10px;
         display: flex;
         justify-content: space-around;
@@ -85,8 +100,8 @@ main {
           justify-content: space-around;
           height: 50%;
           #producto-nombre-carrito {
-            border-style: dashed;
-            border-radius: 30px;
+            border-style: solid;
+            border-radius: 20px;
             border-color: $colorTerciario;
             padding: 10px;
           }
@@ -94,16 +109,16 @@ main {
             display: flex;
             align-items: center;
             justify-content: center;
-            border-style: dashed;
-            border-radius: 30px;
+            border-style: solid;
+            border-radius: 20px;
             border-color: $colorTerciario;
             padding: 8px;
             margin-top: 5px;
           }
         }
         .producto-carrito-precio {
-          border-style: dashed;
-          border-radius: 30px;
+          border-style: solid;
+          border-radius: 20px;
           border-color: $colorTerciario;
           padding: 10px;
         }
@@ -145,7 +160,8 @@ main {
     justify-content: center;
     align-items: center;
     border-color: $colorTerciario;
-    border-style: dashed;
+    background-color: #fa6400;
+    border-style: solid;
     border-radius: 30px;
     width: 30%;
     height: 700px;
@@ -154,8 +170,10 @@ main {
       flex-direction: column;
       justify-content: center;
       border-color: $colorTerciario;
-      border-style: dashed;
+      background-color: #fff;
+      border-style: solid;
       border-radius: 30px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
       height: 80%;
       width: 90%;
       .cantidad-productos-final {
@@ -191,7 +209,7 @@ main {
         background-clip: padding-box;
         background-color: #fa6400;
         border: 1px solid transparent;
-        border-radius: 0.25rem;
+        border-radius: 0.5rem;
         box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
         box-sizing: border-box;
         color: #fff;

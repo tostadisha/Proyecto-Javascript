@@ -4,13 +4,25 @@ main .main-inferior {
   height: auto;
   .main-caja-filtros {
     border-color: $colorTerciario;
-    border-style: dashed;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-style: solid;
     width: 20%;
     border-radius: 20px;
+    .procesadores-filtro {
+      div {
+        margin: 2px;
+      }
+    }
+    .tarjetas-filtro {
+      div {
+        margin: 2px;
+      }
+    }
   }
   .main-caja-productos {
     border-color: $colorTerciario;
-    border-style: dashed;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-style: solid;
     width: 75%;
     border-radius: 20px;
     margin-left: 5%;
@@ -23,8 +35,35 @@ main .main-inferior {
   .main-cantidad-productos {
     display: flex;
     flex-direction: column;
+    border-radius: 20px;
+    padding: 20px;
+    padding-right: 5px;
+    margin-top: 20px;
+    background-color: #fa6400;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     h2 {
       margin-bottom: 0;
+      color: #fff;
+    }
+    .cantidad-productos-numero {
+      h3 {
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+        color: #fff;
+        div {
+          box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+            rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+            rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+          margin-right: 20px;
+          background-color: #fff;
+          border-radius: 5px;
+          padding: 7px;
+          color: black;
+        }
+      }
     }
   }
 }
@@ -39,8 +78,10 @@ main .main-caja-busqueda {
   justify-content: space-around;
   align-items: center;
   margin: 5px 3%;
+  margin-bottom: 7px;
   border-color: $colorTerciario;
-  border-style: dashed;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-style: solid;
   border-radius: 20px;
   height: 10vh;
   p {
@@ -80,15 +121,21 @@ main .main-caja-productos {
     flex-direction: column;
     width: 250px;
     border-radius: 30px;
-    margin: 5px;
+    margin: 7px;
     border-color: $colorTerciario;
-    border-style: dashed;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+      rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    border-style: solid;
     .producto-datos-top {
       display: flex;
       justify-content: space-around;
       align-items: center;
       img {
         height: 3vh;
+      }
+      p {
+        color: black;
+        font-weight: 600;
       }
     }
     .producto-imagen-principal {
@@ -104,13 +151,19 @@ main .main-caja-productos {
       display: flex;
       justify-content: center;
       align-items: center;
+      p {
+        color: black;
+        font-weight: 600;
+      }
     }
     .producto-precio {
       display: flex;
       justify-content: center;
       align-items: center;
       p {
-        font-size: 20px;
+        font-size: 25px;
+        font-weight: 600;
+        color: #fa6400;
       }
     }
     .producto-div-boton-agregar {
@@ -118,30 +171,34 @@ main .main-caja-productos {
       justify-content: center;
       align-items: center;
       .boton-agregar {
-        margin: 10px;
-        appearance: none;
-        background-color: $colorSecundario;
-        border: 1px solid rgba(27, 31, 35, 0.15);
-        border-radius: 6px;
-        box-shadow: rgba(27, 31, 35, 0.1) 0 1px 0;
+        align-items: center;
+        background-clip: padding-box;
+        background-color: #fa6400;
+        border: 1px solid transparent;
+        border-radius: 0.25rem;
+        box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
         box-sizing: border-box;
         color: #fff;
         cursor: pointer;
-        display: inline-block;
-        font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial,
-          sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-        font-size: 14px;
+        display: inline-flex;
+        font-family: system-ui, -apple-system, system-ui, "Helvetica Neue",
+          Helvetica, Arial, sans-serif;
+        font-size: 16px;
         font-weight: 600;
-        line-height: 20px;
-        padding: 6px 16px;
+        justify-content: center;
+        line-height: 1.25;
+        margin: 0;
+        margin-bottom: 10px;
+        min-height: 3rem;
+        padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
         position: relative;
-        text-align: center;
         text-decoration: none;
+        transition: all 250ms;
         user-select: none;
         -webkit-user-select: none;
         touch-action: manipulation;
-        vertical-align: middle;
-        white-space: nowrap;
+        vertical-align: baseline;
+        width: auto;
       }
     }
   }

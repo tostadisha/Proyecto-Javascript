@@ -28,7 +28,7 @@ function precioTotalProductosX(arr) {
     precioTotal += e.precio;
   });
   precioTotalProductos.innerHTML = `<p>Precio total:</p>
-  <h1>${precioTotal}</h1>`;
+  <h1>$ ${precioTotal}</h1>`;
   let cantidadProductos = 0;
   cantidadProductos = carritoProductos.length;
   cantidadDeProductos.innerHTML = `<p>Cantidad de productos:</p>

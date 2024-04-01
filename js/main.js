@@ -149,6 +149,6 @@ function cantidadProductosMain() {
   let cantidadProductos = 0;
   cantidadProductos = carritoProductos.length;
   cantidadProductosMainX.innerHTML = `<h2>Tienes en el carrito</h2>
-  <h3>${cantidadProductos} productos</h3>`;
+   <div class="cantidad-productos-numero"><h3><div>${cantidadProductos}</div> productos</h3></div>`;
 }
 cantidadProductosMain(carritoProductos);
