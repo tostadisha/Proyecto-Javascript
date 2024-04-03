@@ -35,8 +35,7 @@ function crearCuadradoProducto(arr) {
         <button id=${el.id} class="boton-agregar">Agregar</button>
       </div>
       </div>`;
-    contenedorProductosVenta.innerHTML =
-      contenedorProductosVenta.innerHTML + html;
+    contenedorProductosVenta.innerHTML += html;
   }
 
   const botones = document.querySelectorAll(".boton-agregar");
